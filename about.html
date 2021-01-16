@@ -60,6 +60,108 @@
         </div>
       </div>
     </section>
+    <br><br><br><br><br>
+
+    <section class="ftco-section">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center">
+            <h2 class="mb-4">Upload Traffic Data</h2>
+            <p class="mb-5">Please upload your traffic data on specific roads and intersections you would like to test with. Please upload as a CSV.</p>
+
+            <label for="file-upload" class="btn btn-primary px-4 py-3">Upload File</label>
+            <input id="file-upload" type="file"/ style="display: none;">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center">
+            <form id = "GOAT" method = "post" action="#">
+                <div class="col-md-12 pr-md-5">
+              <div class="form-group">
+                      <textarea name="" id="namename" cols="30" rows="1" class="form-control" placeholder="Name"></textarea>
+                    </div>
+              <div class="form-group">
+                      <textarea name="" id="emailemail" cols="30" rows="1" class="form-control" placeholder="Email"></textarea>
+                    </div>
+              <div class="form-group">
+                      <textarea name="" id="citycity" cols="30" rows="1" class="form-control" placeholder="City (eg. San Jose, CA)"></textarea>
+                    </div>
+              <div class="form-group">
+                      <textarea name="" id="addressaddress" cols="30" rows="1" class="form-control" placeholder="State"></textarea>
+                    </div>
+                    </div>
+              <div class="row justify-content-center mb-5 element-animate">
+                      <div class="col-md-8 text-center">
+                        <button class="btn btn-primary py-3 px-5" type="button" onClick="beastfunction()">Submit</button>
+                      </div>
+              </div>
+              <style>
+												.redDiv {
+													display: none;
+													border: 1px solid red;
+												}
+												</style>
+              <p id = "demo"></p>
+              <p class = "redDiv" id = "fail"></p>
+              <script>
+              function beastfunction(){
+              var name = document.getElementById("namename").value;
+              var email = document.getElementById("emailemail").value;
+              var city = document.getElementById("citycity").value;
+              var address = document.getElementById("addressaddress").value;
+              if (name == "") {
+              document.getElementById("demo").innerHTML = "";
+              document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+              document.getElementById("fail").style.display = "block";
+            } else if (email == "") {
+              document.getElementById("demo").innerHTML = "";
+              document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+              document.getElementById("fail").style.display = "block";
+            } else if (city == "") {
+              document.getElementById("demo").innerHTML = "";
+              document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+              document.getElementById("fail").style.display = "block";
+            } else if (address == "") {
+              document.getElementById("demo").innerHTML = "";
+              document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+              document.getElementById("fail").style.display = "block";
+            } else {
+              document.getElementById("demo").innerHTML = "</br>Thank you for submitting your report! You will receive an email when our system has found a match.";
+              document.getElementById("fail").innerHTML = "";
+              document.getElementById("fail").style.border = "1px solid white";
+              document.getElementById("GOAT").reset()
+            }
+
+            }
+
+              </script>
+
+            </form>
+
+
+
+          </div>
+
+
+
+
+                   </div>
+                 </form>
+
+       <p></p>
+
+
+               </center>
+                         </div>
+          </form>
+
+
+
+
+
+
 		
 		<section class="ftco-section">
 			<div class="container">
