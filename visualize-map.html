@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	
+		<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+	
+		<link rel="stylesheet" href="css/aos.css">
+	
+		<link rel="stylesheet" href="css/ionicons.min.css">
+	
+		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+		<link rel="stylesheet" href="css/jquery.timepicker.css">
+	
+		
+		<link rel="stylesheet" href="css/flaticon.css">
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/style.css">
+	
+		<link rel="shortcut icon" type="image/png" href="images/favicon-varj.png"/>
+
+	</head>
+
+	<body>
+		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+		<section id="map">
+	        <div class="container">
+	            <div class="row">
+
+					<div class="col-lg-4" id="map-controls">
+						<p><br></p>
+
+						<div class="radiuscontroller filtersection">
+							<h4>Region of Interest</h4>
+							<hr>
+							<p>Location Radii</p>
+							<!-- slider for city A -->
+							<input id="sliderA" type="text" data-slider-id="Aknob" data-slider-min="0" data-slider-max="500" data-slider-step="1" data-slider-value="175" data-slider-tooltip="hide">
+							<span class="horizontal-padding-left" id="sliderALabel"><span id="sliderAVal">2.4</span> miles</span>
+
+							<p></p>
+
+							<!-- slider for city B -->
+							<input id="sliderB" type="text" data-slider-id="Bknob" data-slider-min="0" data-slider-max="500" data-slider-step="1" data-slider-value="175" data-slider-tooltip="hide">
+							<span class="horizontal-padding-left" id="sliderBLabel"><span id="sliderBVal">2.4</span> miles</span>
+						</div>
+
+						<div class="categorycontroller filtersection">
+							<h4>Filters</h4>
+							<hr>
+							<p>Category</p>
+							<div class="dropdown text-left" style="display:inline-block">
+							  <button class="btn btn-default dropdown-toggle" type="button" id="categoryButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							    All Crimes&nbsp;&nbsp;
+							    <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu scrollable-menu" style="margin-bottom: 30px; float:center"role="menu">
+								<li><a href="#">All Crimes</a></li>
+							    <li role="separator" class="divider"></li>
+							    <li><a href="#">Arson</a></li>
+							    <li><a href="#">Assault</a></li>
+								<li><a href="#">Bribery</a></li>
+								<li><a href="#">Burglary</a></li>
+								<li><a href="#">Driving Under the Influence</a></li>
+								<li><a href="#">Drug/Narcotic</a></li>
+								<li><a href="#">Drunkenness</a></li>
+								<li><a href="#">Embezzlement</a></li>
+								<li><a href="#">Extortion</a></li>
+								<li><a href="#">Family Offenses</a></li>
+								<li><a href="#">Forgery/Counterfeiting</a></li>
+								<li><a href="#">Fraud</a></li>
+								<li><a href="#">Gambling</a></li>
+								<li><a href="#">Kidnapping</a></li>
+								<li><a href="#">Larceny/Theft</a></li>
+								<li><a href="#">Liquor Laws</a></li>
+								<li><a href="#">Loitering</a></li>
+								<li><a href="#">Missing Person</a></li>
+								<li><a href="#">Non-Criminal</a></li>
+								<li><a href="#">Other Offenses</a></li>
+								<li><a href="#">Prostitution</a></li>
+								<li><a href="#">Robbery</a></li>
+								<li><a href="#">Runaway</a></li>
+								<li><a href="#">Secondary Codes</a></li>
+								<li><a href="#">Sex Offenses</a></li>
+								<li><a href="#">Stolen Property</a></li>
+								<li><a href="#">Suicide</a></li>
+								<li><a href="#">Suspicious Occ</a></li>
+								<li><a href="#">Trespass</a></li>
+								<li><a href="#">Vandalism</a></li>
+								<li><a href="#">Vehicle Theft</a></li>
+								<li><a href="#">Warrants</a></li>
+								<li><a href="#">Weapon Laws</a></li>
+							  </ul>
+							</div>
+							<p><br></p>
+							<p>Day(s) and Time</p>
+							<div class="daterangecontroller datetimefilter">
+								<div class="input-daterange input-group" id="datepicker">
+								    <input type="text" class="input-sm form-control" id="datepickermin" value="03/02/2016"/>
+								    <span class="input-group-addon">to</span>
+								    <input type="text" class="input-sm form-control" id="datepickermax" value="04/01/2016"/>
+								</div>
+							</div>
+
+							<div class="weekdaycontroller datetimefilter">
+								<div class="btn-group" data-toggle="buttons" id="weekdayfilter">
+									<label class="btn btn-default active">
+										<input type="checkbox" value="Sunday" checked> Su
+									</label>
+									<label class="btn btn-default active">
+										<input type="checkbox" value="Monday" checked> M
+									</label>
+									<label class="btn btn-default active">
+										<input type="checkbox" value="Tuesday" checked> T
+									</label>
+									<label class="btn btn-default active">
+										<input type="checkbox" value="Wednesday" checked> W
+									</label>
+									<label class="btn btn-default active">
+										<input type="checkbox" value="Thursday" checked> Th
+									</label>
+									<label class="btn btn-default active">
+										<input type="checkbox" value="Friday" checked> F
+									</label>
+									<label class="btn btn-default active">
+										<input type="checkbox" value="Saturday" checked> Sa
+									</label>
+								</div>
+							</div>
+
+							<div class="text-center timerangecontroller datetimefilter">
+								<i class="fa fa-sun-o horizontal-padding-right" aria-hidden="true"></i>
+								<input id="time-slider" type="text" data-slider-id="sliderTime" data-slider-min="0" data-slider-max="24" data-slider-step="1" data-slider-value="[0,24]" data-slider-handle="square"/>
+								<i class="fa fa-moon-o horizontal-padding-left" aria-hidden="true"></i>
+								<p></p>
+								<label id="timerangelabel">12:00 AM to 11:59 PM</label>
+							</div>
+						</div>
+
+						<br><br>
+						
+					</div>
+					<div class="col-lg-8" id="map-container">
+	            		<header class="text-right">
+		            		<h1>San Francisco Crime Data</h1>
+							<h3>March 2 - April 1 (2016)</h3>
+						</header>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+		<!--<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/bootstrap-slider.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+		<script src="js/visualize-map.js"></script>
+		<script src="js/crime-data.js"></script>
+
+	</body>
+</html>

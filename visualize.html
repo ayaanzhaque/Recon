@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Recon - Visualize</title>
+    <title>Scout - Visualize</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -44,12 +44,13 @@
   
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="government.html" class="nav-link">Government</a></li>
-              <li class="nav-item active"><a href="visualize.html" class="nav-link">Visualize</a></li>
-          <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+              <li class="nav-item" id = 'homeLi'><a href="index.html" class="nav-link" id='scoutHome'>Home</a></li>
+              <li class="nav-item" id = 'govLi'><a href="government.html" class="nav-link">Government</a></li>
+              <li class="nav-item active" id = 'visLi'><a href="visualize.html" class="nav-link" style='color: blue !important;'>Visualize</a></li>
+          <li class="nav-item" id = 'comLi'><a href="community.html" class="nav-link">Community</a></li>
           <li class="nav-item"><a class="nav-link"></a></li>
           <li class="nav-item"><a class="nav-link"></a></li>
+  
             </ul>
           </div>
         </div>
@@ -80,7 +81,7 @@
 	          	<p>View an interactive map depicting the current crime statistics in each San Francisco district.</p>
           	</div>
           </div>
-          <embed type="text/html" src="hiddenHTML/cumulative.html"  width="100%" height="700px">
+          <embed type="text/html" src="visualize-map.html"  width="100%" height="1000px">
         </div>
         
         

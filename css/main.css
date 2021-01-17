@@ -1,0 +1,170 @@
+body{
+    font-family: 'Baloo Tamma 2', sans-serif;
+  }
+  #map{
+    display: inline-block;
+  }
+  .wrapper{
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+  }
+  h1{
+    text-align: center;
+  }
+  .controls{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    max-width: 400px;
+  }
+  .homeRadius{
+    vertical-align: top;
+  }
+  .workRadius{
+    vertical-align: top;
+  
+  }
+  .cicles{
+    z-index: -10;
+  }
+  .crimeDesc span{
+    width: 18px;
+    display: inline-block;
+    height: 18px;
+    vertical-align: middle;
+    background: #3e4cd2;
+    opacity: 0.5;
+  } 
+  
+  }
+  input#homeA{
+    color: brown;
+  }
+  input#workB{
+    color: green;
+  }
+  .markB, .markA{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    z-index: 100;
+  }
+  .markB:active, .markA:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
+  
+  .markB:hover, .markA:hover{
+    opacity: 0.3 !important;
+    fill-opacity: 1.0 !important;
+  }
+  
+  
+  
+  .weekdays input{
+    display: inline-block;
+  
+  }
+  
+  .weekdays{
+    margin: 20px;
+  }
+  
+  .weekdays label{
+  
+    width: 100px;
+    display: inline-block;
+  
+  }
+  
+  div{
+    outline: none;
+  }
+  
+  
+  .dropdown-check-list {
+    display: inline-block;
+  }
+  .dropdown-check-list .anchor {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 0px 5px 0px;
+    border: 1px solid #ccc;
+    width: 274px;
+  }
+  .dropdown-check-list .anchor:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  .dropdown-check-list .anchor:active:after {
+    right: 8px;
+    top: 21%;
+  }
+  .dropdown-check-list ul.items {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    width: 270px;
+    height: 200px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  .dropdown-check-list ul.items li {
+    list-style: none;
+  }
+  .dropdown-check-list ul.items li:nth-child(odd){
+    background: #E8E8FF;
+  
+  }
+  .dropdown-check-list ul.items li label{
+    margin: 0 10px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  #spinnerWrap{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.5);
+  }
+  .spinner {
+    margin-top: -28px;
+    margin-left: -28px;
+    height: 48px;
+    width: 48px;
+    animation: rotate 0.8s infinite linear;
+    border: 8px solid #000;
+    border-right-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+  }
+  
+  @keyframes rotate {
+    0%    { transform: rotate(0deg); }
+    100%  { transform: rotate(360deg); }
+  }
+  
