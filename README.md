@@ -3,3 +3,7 @@
 # [Recon](https://reconai.tech/)
 
 Using AI to assist law enforcement in crime response
+
+Demo: https://youtu.be/xR2VZlD2xQY
+
+Devpost: https://devpost.com/software/recon-htv45s
