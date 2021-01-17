@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700|Lato);
+
+h1, h2, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+hr {
+    border-color: #d8d8d8;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    letter-spacing:0.5px;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.container {
+    padding: 0;
+}
+
+#map-container {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#map-controls {
+    opacity: 0.9;
+    height: 100%;
+}
+
+.filtersection {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background-color: #f8f8f8;
+}
+
+.datetimefilter {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+div.tooltip {
+    text-align: center;
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    font: 10px sans-serif;
+    background: black;
+    color: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.horizontal-padding-right {
+    padding-right: 12px;
+}
+
+.horizontal-padding-left {
+    padding-left: 12px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+i.fa-sun-o {
+    font-size:2em; color:#ffd700; position:relative; top:6px;
+}
+
+i.fa-moon-o {
+    font-size:2em; color:#b2b2d8; position:relative; top:6px;
+}

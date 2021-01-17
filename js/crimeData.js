@@ -6,13 +6,13 @@
 var svgContainer = d3.select("svg");
 
 const pinSize = 26, // width and height of map pins
-	defaultRadius = 175; // default city radius in pixels
+	defaultRadius = 437.5; // default city radius in pixels
 
 var mileToPixelRatio = 0; // how many pixels are in a mile
 const EARTH_RADIUS = 3958.8; //radius of earth in miles
 
-const colorA = "#7BCC70",
-	colorB = "#72587F";
+const colorA = "#0033c7",
+	colorB = "#d4af37";
 
 // Define the div for the tooltip
  var div = d3.select("body").append("div")
@@ -52,7 +52,7 @@ function calculateMPR(coords1, coords2) {
 }
 
 // Load data, setup controls
-d3.json("../data/scpd-incidents.json", function(error, crimes) {
+d3.json("../json_data/predicted_incidents.json", function(error, crimes) {
 	if (error) throw error;
 	mileToPixelRatio = calculateMPR(crimes.data[0].Location, crimes.data[crimes.data.length/2].Location);
 	drawCityPins(200, 375, 450, 375, crimes.data); //default pin locations
@@ -127,7 +127,7 @@ function drawCityPins(Ax, Ay, Bx, By, crimes) {
   		.attr("y", Ay)
   		.attr("height", pinSize)
   		.attr("width", pinSize)
-  		.attr("xlink:href", "../images/citymarker.png")
+  		.attr("xlink:href", "assets/citymarker.png")
   		.attr("class", "cityPins")
   		.attr("id", "cityA")
 		.style("opacity", "0.9")
@@ -139,7 +139,7 @@ function drawCityPins(Ax, Ay, Bx, By, crimes) {
   		.attr("y", By)
   		.attr("height", pinSize)
   		.attr("width", pinSize)
-		.attr("xlink:href", "../images/citymarker.png")
+		.attr("xlink:href", "assets/citymarker.png")
 		.attr("class", "cityPins")
 		.attr("id", "cityB")
 		.style("opacity", "0.9")
@@ -401,17 +401,21 @@ function update(crimes) {
 
 		.on("mouseover", function(d) {
 			this.setAttribute('r', 10);
-			this.setAttribute("style", "fill: #F57C00");
+			this.setAttribute("style", "fill: #F98B88");
             div.transition()
                 .duration(200)
 				.style("opacity", 0.9);
-            div.html(d.Category + "<br/>Resolution: " + d.Resolution)
+            div.html("<br/>Predicted Crime: " + d.Category + "<br/>Predicted Resolution: " + d.Resolution)
                 .style("left", (d3.event.pageX - 60) + "px")
-                .style("top", (d3.event.pageY - 70) + "px");
+				.style("top", (d3.event.pageY - 70) + "px")
+				.style("color", "#ffffff")
+				.style("font-size", "15px")
+				.style("background-color", "#000000");
+				
             })
         .on("mouseout", function(d) {
 			this.setAttribute('r', 2);
-			this.setAttribute("style", "fill: #8C1717");
+			this.setAttribute("style", "fill: #7D08B8");
             div.transition()
                 .duration(500)
                 .style("opacity", 0);
@@ -420,7 +424,7 @@ function update(crimes) {
 			this.parentElement.appendChild(this);
 		})
 
-		.style("fill", "#8C1717");
+		.style("fill", "#7D08B8");
 
 
 	circles.exit().remove();

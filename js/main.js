@@ -176,11 +176,11 @@
 			if ( st > 350 ) {
 				if ( !navbar.hasClass('awake') ) {
 					navbar.addClass('awake');	
-					document.getElementById("scoutLogo").style.color = "black";
-					document.getElementById("scoutHome").style.color = "black";
-					document.getElementById("scoutGov").style.color = "black";
-					document.getElementById("scoutVis").style.color = "black";
-					document.getElementById("scoutCom").style.color = "black";
+					document.getElementById("reconLogo").style.color = "black";
+					document.getElementById("reconHome").style.color = "black";
+					document.getElementById("reconGov").style.color = "black";
+					document.getElementById("reconVis").style.color = "black";
+					document.getElementById("reconCom").style.color = "black";
 				}
 				
 				if(sd.length > 0) {
@@ -192,11 +192,11 @@
 					navbar.removeClass('awake');
 					navbar.addClass('sleep');
 					
-					document.getElementById("scoutLogo").style.color = "white";
-					document.getElementById("scoutHome").style.color = "white";
-					document.getElementById("scoutGov").style.color = "white";
-					document.getElementById("scoutVis").style.color = "white";
-					document.getElementById("scoutCom").style.color = "white";
+					document.getElementById("reconLogo").style.color = "white";
+					document.getElementById("reconHome").style.color = "white";
+					document.getElementById("reconGov").style.color = "white";
+					document.getElementById("reconVis").style.color = "white";
+					document.getElementById("reconCom").style.color = "white";
 				}
 				if(sd.length > 0) {
 					sd.removeClass('sleep');
