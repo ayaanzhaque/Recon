@@ -87,7 +87,98 @@
         
 
         </div>
+
+        <div class="container">
+
+          <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-8 text-center">
+              <h2 class="mb-4">Best Resolution Process</h2>
+              <p class="mb-5">Input parameters for a specific previous crime or predicted crime to determine the best method of resolution.</p>
+            </div>
+          </div>
+  
+          <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-8 text-center">
+              <form id = "GOAT" method = "post" action="#">
+                  <div class="col-md-12 pr-md-5">
+                <div class="form-group">
+                        <textarea name="" id="districtdistrict" cols="30" rows="1" class="form-control" placeholder="District"></textarea>
+                      </div>
+                <div class="form-group">
+                        <textarea name="" id="addressaddress" cols="30" rows="1" class="form-control" placeholder="Address"></textarea>
+                      </div>
+                <div class="form-group">
+                        <textarea name="" id="categorycategory" cols="30" rows="1" class="form-control" placeholder="Category of Crime"></textarea>
+                      </div>
+                <div class="form-group">
+                        <textarea name="" id="dayday" cols="30" rows="1" class="form-control" placeholder="Day of Week"></textarea>
+                      </div>
+                <div class="form-group">
+                        <textarea name="" id="timetime" cols="30" rows="1" class="form-control" placeholder="Time"></textarea>
+                      </div>
+                      </div>
+                <div class="row justify-content-center mb-5 element-animate">
+                        <div class="col-md-8 text-center">
+                          <button class="btn btn-primary py-3 px-5" type="button" onClick="beastfunction()">Submit</button>
+                        </div>
+                </div>
+                <style>
+                          .redDiv {
+                            display: none;
+                            border: 1px solid red;
+                          }
+                          </style>
+                <p id = "demo"></p>
+                <p class = "redDiv" id = "fail"></p>
+                <script>
+                function beastfunction(){
+                var district = document.getElementById("districtdistrict").value;
+                var adresss = document.getElementById("addressaddress").value;
+                var category = document.getElementById("categorycategory").value;
+                var day = document.getElementById("dayday").value;
+                var time = document.getElementById("timetime").value;
+                if (district == "") {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("fail").innerHTML = "Please fill out all questions to submit your data.";
+                document.getElementById("fail").style.display = "block";
+              } else if (adresss == "") {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("fail").innerHTML = "Please fill out all questions to submit your data.";
+                document.getElementById("fail").style.display = "block";
+              } else if (category == "") {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("fail").innerHTML = "Please fill out all questions to submit your data.";
+                document.getElementById("fail").style.display = "block";
+              } else if (day == "") {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("fail").innerHTML = "Please fill out all questions to submit your data.";
+                document.getElementById("fail").style.display = "block";
+              } else if (time == "") {
+                document.getElementById("demo").innerHTML = "";
+                document.getElementById("fail").innerHTML = "Please fill out all questions to submit your data.";
+                document.getElementById("fail").style.display = "block";
+              } else {
+                document.getElementById("demo").innerHTML = "</br>Thank you for submitting your data!";
+                document.getElementById("fail").innerHTML = "";
+                document.getElementById("fail").style.border = "1px solid white";
+                document.getElementById("GOAT").reset()
+              }
+  
+              }
+  
+                </script>
+  
+              </form>
+  
+  
+  
+            </div>
+
+
         </section>
+
+
+        
 
     <!-- INTERACTIVE MAP SECTION ENDS HERE-->
     
@@ -128,6 +219,12 @@
         <div class="row">
           
         </div>
+        
+
+        
+
+
+
       </div>
     </footer>
   
