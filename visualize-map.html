@@ -4,13 +4,15 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<title>CS448B Assignment 3</title>
 		<!-- Bootstrap -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/css/bootstrap-slider.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 		<!-- Custom CSS -->
-	    <link rel="stylesheet" href="css/main.css" type="text/css">
+	    <link rel="stylesheet" href="css/main-2.css" type="text/css">
 	</head>
 
 	<body>
@@ -23,30 +25,44 @@
 
 					<div class="col-lg-4" id="map-controls">
 						<p><br></p>
-
+						<hr>
 						<div class="radiuscontroller filtersection">
-							<h4>Region of Interest</h4>
-							<hr>
-							<p>Location Radii</p>
-							<!-- slider for city A
-							<input id="sliderA" type="text" data-slider-id="Aknob" data-slider-min="0" data-slider-max="500" data-slider-step="1" data-slider-value="175" data-slider-tooltip="hide">
-							<span class="horizontal-padding-left" id="sliderALabel"><span id="sliderAVal">2.4</span> miles</span>
-							<p></p>  -->
-
-							<!-- slider for city B -->
-							<input id="sliderB" type="text" data-slider-id="Bknob" data-slider-min="0" data-slider-max="500" data-slider-step="1" data-slider-value="175" data-slider-tooltip="hide">
-							<span class="horizontal-padding-left" id="sliderBLabel"><span id="sliderBVal">2.4</span> miles</span>
+							<br>
+							<p>Use these sliders to control the radius of crimes you would like to see. You can also drag the pins 
+								on the map to control the system. 
+							</p>
+							<div id="radiusfilter">
+							<label class="active col-1">
+								<input type="checkbox" value="Monday" checked> A
+							</label>
+							<label class="active col-1">
+								<input type="checkbox" value="Monday" checked> B
+							</label>
+							<br>
 						</div>
 
+							<!-- slider for city A -->
+							<input id="sliderA" type="text" data-slider-id="Aknob" data-slider-min="0" data-slider-max="500" data-slider-step="1" data-slider-value="175" data-slider-tooltip="hide">
+							<span class="horizontal-padding-left" id="sliderALabel"><span id="sliderAVal">2.4</span> miles</span>
+							
+							
+							<p></p>
+
+							
+							<!-- slider for city B -->
+							<input id="sliderB" type="text" data-slider-id="Bknob" data-slider-min="0" data-slider-max="500" data-slider-step="1" data-slider-value="175" data-slider-tooltip="hide">
+							<span class="horizontal-padding-center" id="sliderBLabel"><span id="sliderBVal">2.4</span> miles</span>
+						</div>
+						<br><hr>
 						<div class="categorycontroller filtersection">
-							<h4>Filters</h4>
-							<hr>
-							<p>Category</p>
+							<br>
+							<p>Use the drop-down menu below to filter by type of predicted crimes.</p>
+							
 							<div class="dropdown text-left" style="display:inline-block">
-							  <button class="btn btn-default dropdown-toggle" type="button" id="categoryButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    All Crimes&nbsp;&nbsp;
-							    <span class="caret"></span>
-							  </button>
+							  <button class="justify-content-center btn-default dropdown-toggle" style='font-size: 20px; border: 1px solid black;' type="button" id="categoryButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								All Crimes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;</button>
+							  
 							  <ul class="dropdown-menu scrollable-menu" style="margin-bottom: 30px; float:center"role="menu">
 								<li><a href="#">All Crimes</a></li>
 							    <li role="separator" class="divider"></li>
@@ -86,42 +102,41 @@
 							  </ul>
 							</div>
 							<p><br></p>
-							<p>Day(s) and Time</p>
-							<div class="daterangecontroller datetimefilter">
-								<div class="input-daterange input-group" id="datepicker">
-								    <input type="text" class="input-sm form-control" id="datepickermin" value="03/02/2016"/>
-								    <span class="input-group-addon">to</span>
-								    <input type="text" class="input-sm form-control" id="datepickermax" value="04/01/2016"/>
-								</div>
-							</div>
-
-							<div class="weekdaycontroller datetimefilter">
+							<hr><br>
+							<div class="row text-left">
+								<p>Use the checklist below to filter by day of the week. Our model predicts for the next seven days.</p>
 								<div class="btn-group" data-toggle="buttons" id="weekdayfilter">
-									<label class="btn btn-default active">
-										<input type="checkbox" value="Sunday" checked> Su
+									<div class='col-2'>
+
+									</div>
+									<label class="active col-1">
+										<input type="checkbox" value="Sunday" checked> S
 									</label>
-									<label class="btn btn-default active">
+									<label class="active col-1">
 										<input type="checkbox" value="Monday" checked> M
 									</label>
-									<label class="btn btn-default active">
+									<label class="active col-1">
 										<input type="checkbox" value="Tuesday" checked> T
 									</label>
-									<label class="btn btn-default active">
+									<label class="active col-1">
 										<input type="checkbox" value="Wednesday" checked> W
 									</label>
-									<label class="btn btn-default active">
-										<input type="checkbox" value="Thursday" checked> Th
+									<label class="active col-1">
+										<input type="checkbox" value="Thursday" checked> T
 									</label>
-									<label class="btn btn-default active">
+									<label class="active col-1">
 										<input type="checkbox" value="Friday" checked> F
 									</label>
-									<label class="btn btn-default active">
-										<input type="checkbox" value="Saturday" checked> Sa
+									<label class="active col-1">
+										<input type="checkbox" value="Saturday" checked> S
 									</label>
 								</div>
 							</div>
-
+							<br>
+							<hr>
+							<br>
 							<div class="text-center timerangecontroller datetimefilter">
+								<p class='text-left'>Use this slider to filter by time of day, from 12:00 AM to 11:59 PM.</p>
 								<i class="fa fa-sun-o horizontal-padding-right" aria-hidden="true"></i>
 								<input id="time-slider" type="text" data-slider-id="sliderTime" data-slider-min="0" data-slider-max="24" data-slider-step="1" data-slider-value="[0,24]" data-slider-handle="square"/>
 								<i class="fa fa-moon-o horizontal-padding-left" aria-hidden="true"></i>
