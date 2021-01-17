@@ -47,30 +47,140 @@
 	      </div>
 	    </div>
 	  </nav>
-    <!-- END nav -->
+	<!-- END nav -->
+	 
+	<!-- Start of regular page-->
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Our Architect</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Team <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Community</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Community <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
-    </section>
+	</section>
+	
+	<!-- end of regular page -->
+
+	<!-- start of nlp part -->
+
+	<section class="ftco-services">
+		<div class="container">
+			<center><h2 class='ftco-animate'>Social Media Analysis</h2>
+			<p class='justify-content-center ftco-animate'>Our model webscrapes social media to find possible 
+			</p>
+		</center>
+		<br><br>
+		<p>add pythonanywhere into here</p>
+		</div>
+	</section>
+
+<!-- end of nlp section-->
+
+<!-- START submit concerns to authorities -->
+
+<section class="ftco-services">
+	<div class="container">
+		<center><h2 class='ftco-animate'>Report crimes</h2>
+			<p class='justify-content-center ftco-animate'>Report the homies u tryna get glocked up. Enter as much info as you can
+			</p>
+		</center>
+  
+
+  <div class="row justify-content-center mb-5 element-animate">
+	<div class="col-md-8 text-center">
+	  <form id = "GOAT" method = "post" action="#">
+		  <div class="col-md-12 pr-md-5">
+		<div class="form-group">
+				<textarea name="" id="namename" cols="30" rows="1" class="form-control" placeholder="Name"></textarea>
+			  </div>
+		<div class="form-group">
+				<textarea name="" id="emailemail" cols="30" rows="1" class="form-control" placeholder="Email"></textarea>
+			  </div>
+		<div class="form-group">
+				<textarea name="" id="citycity" cols="30" rows="1" class="form-control" placeholder="City (eg. San Jose, CA)"></textarea>
+			  </div>
+		<div class="form-group">
+				<textarea name="" id="addressaddress" cols="30" rows="1" class="form-control" placeholder="State"></textarea>
+			  </div>
+			  </div>
+		<div class="row justify-content-center mb-5 element-animate">
+				<div class="col-md-8 text-center">
+				  <button class="btn btn-primary py-3 px-5" type="button" onClick="beastfunction()">Submit</button>
+				</div>
+		</div>
+		<style>
+										  .redDiv {
+											  display: none;
+											  border: 1px solid red;
+										  }
+										  </style>
+		<p id = "demo"></p>
+		<p class = "redDiv" id = "fail"></p>
+		<script>
+		function beastfunction(){
+		var name = document.getElementById("namename").value;
+		var email = document.getElementById("emailemail").value;
+		var city = document.getElementById("citycity").value;
+		var address = document.getElementById("addressaddress").value;
+		if (name == "") {
+		document.getElementById("demo").innerHTML = "";
+		document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+		document.getElementById("fail").style.display = "block";
+	  } else if (email == "") {
+		document.getElementById("demo").innerHTML = "";
+		document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+		document.getElementById("fail").style.display = "block";
+	  } else if (city == "") {
+		document.getElementById("demo").innerHTML = "";
+		document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+		document.getElementById("fail").style.display = "block";
+	  } else if (address == "") {
+		document.getElementById("demo").innerHTML = "";
+		document.getElementById("fail").innerHTML = "Please fill out all questions to submit your report.";
+		document.getElementById("fail").style.display = "block";
+	  } else {
+		document.getElementById("demo").innerHTML = "</br>Thank you for submitting your report! You will receive an email when our system has found a match.";
+		document.getElementById("fail").innerHTML = "";
+		document.getElementById("fail").style.border = "1px solid white";
+		document.getElementById("GOAT").reset()
+	  }
+
+	  }
+
+		</script>
+
+	  </form>
+
+
+
+	</div>
+	</div>
+
+
+  </div>
+</div>
+</section>
+
+<!-- END submit concerns to authorities-->
+
+<!-- START Online Bounty System -->
 		
 		
 		<section class="ftco-section bg-light">
     	<div class="container">
     		<div class="row justify-content-start mb-5 pb-2">
           <div class="col-md-4 heading-section ftco-animate">
-          	<span class="subheading subheading-with-line"><small class="pr-2 bg-light">Projects</small></span>
-            <h2 class="mb-4">Recent Projects</h2>
+          	<span class="subheading subheading-with-line"><small class="pr-2 bg-light">Bounty</small></span>
+            <h2 class="mb-4">Bounty Board</h2>
           </div>
           <div class="col-md-8 pl-md-5 heading-section ftco-animate">
           	<div class="pl-md-4 border-line">
-	          	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+	          	<p>
+					View the Bounty Board to see who you should strap up *EMOJI*  
+				  </p>
           	</div>
           </div>
         </div>
@@ -81,52 +191,39 @@
     				<div class="project">
 	    				<img src="images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Interior Design</span>
 	    					<h3><a href="project.html">Office Interior Design</a></h3>
 	    				</div>
-	    				<a href="images/work-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
     				</div>
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="project">
 	    				<img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Interior Design</span>
 	    					<h3>Office Interior Design</h3>
 	    				</div>
-	    				<a href="images/work-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
     				</div>
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="project">
 	    				<img src="images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Interior Design</span>
 	    					<h3>Office Interior Design</h3>
 	    				</div>
-	    				<a href="images/work-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
     				</div>
     			</div>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="project">
 	    				<img src="images/work-4.jpg" class="img-fluid" alt="Colorlib Template">
 	    				<div class="text">
-	    					<span>Interior Design</span>
 	    					<h3>Office Interior Design</h3>
 	    				</div>
-	    				<a href="images/work-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
     				</div>
     			</div>
     	</div>
-    </section>
+	</section>
+	
+
+	<!-- END Bounty System-->
     
     <footer class="ftco-footer ftco-bg-dark ftco-section">
 		<div class="container">
