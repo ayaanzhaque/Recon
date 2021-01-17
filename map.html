@@ -1,0 +1,81 @@
+<html>
+<head>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="js/slider.js" charset="utf-8"></script>
+ 
+</head>
+<body>
+<h1> San Francisco <span style="color: #C300C3;">Crime Incidents</span>   </h1>
+<div id="spinnerWrap">
+  <div class="spinner"></div>
+</div>
+<div class="wrapper">
+  <div id="map"></div>
+  <div class="controls">
+    <p> This visualization shows locations of crime in San Francisco. 
+    The visualisation can be used to understand high risk routes between work and home. 
+    </p>
+    <div class="crimeDesc"> <span> </span> Location of a Crime </div>
+    <div class="homeRadius">
+     
+      <p>
+        <input type="checkbox" id="homeCheck"> 
+        <label class="markALabel" for="homeA"><span style="color:brown;">A</span> Home Radius</label>
+        <input type="text" id="homeA" readonly style="border:0;color:brown; font-weight:bold;">
+      </p>
+      <div id="slider-range-home"></div>
+    </div>
+
+    <div class="workRadius">
+      <p>
+        <input type="checkbox" id="workCheck"> 
+        <label class="markBLabel" for="workB"><span style="color:green;">B</span>  Work Radius</label>
+        <input type="text" id="workB" readonly style="border:0;color:green;font-weight:bold;">
+      </p>
+      
+      <div id="slider-range-work"></div>
+    </div>
+   
+
+   
+    <p>
+      <label for="amount">Time Interval</label>
+      <input type="text" id="amount" readonly style="border:0; font-weight:bold;">
+    </p>
+   
+    <div id="slider-range"></div>
+
+     <div class="weekdays">
+      <input type="checkbox" id="allDays" value="All" checked> <label><strong> All Days</strong></label><br>
+      <div class="days">
+        <input type="checkbox" value="Monday" checked> <label> Monday</label><br>
+        <input type="checkbox" value="Tuesday" checked> <label> Tuesday </label><br>
+        <input type="checkbox" value="Wednesday" checked> <label> Wednesday </label><br>
+        <input type="checkbox" value="Thursday" checked> <label> Thursday </label><br>
+        <input type="checkbox" value="Friday" checked> <label> Friday </label><br>
+        <input type="checkbox" value="Saturday" checked> <label> Saturday </label><br>
+        <input type="checkbox" value="Sunday" checked> <label> Sunday </label><br>
+      </div>
+    </div>
+
+    <div id="list1" class="dropdown-check-list" tabindex="100">
+          <span class="anchor">Filter Crime Type</span>
+
+          <ul id="items" class="items">
+
+          </ul>
+      </div>
+   
+  </div>
+</div>
+  
+
+<script src="js/map.js" charset="utf-8"></script>
+</body>
+</html>
