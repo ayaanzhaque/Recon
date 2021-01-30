@@ -2,6 +2,12 @@
 
 # [Recon](https://reconai.tech/)
 
+- **2nd Place Winner @ OrionHacks 2021**
+
+- **2nd Place Data Analysis Track @ NwHacks 2021**
+
+- **Best UI/UZ @ CruzHacks 2021**
+
 Using AI to assist law enforcement in crime response
 
 Demo: https://youtu.be/xR2VZlD2xQY
